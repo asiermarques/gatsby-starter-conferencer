@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery, Link } from "gatsby"
 
 
 export default () => (
@@ -12,7 +12,8 @@ export default () => (
                     conference_claim,
                     header_banner {
                         cta_pre_text,
-                        cta_text
+                        cta_text,
+                        cta_url
                     }
                 }
             }
@@ -25,7 +26,7 @@ export default () => (
                     <p class="lead">{data.site.siteMetadata.conference_claim}</p>
                     <hr class="my-4"/>
                     <p>{data.site.siteMetadata.header_banner.cta_pre_text}</p>
-                    <a class="btn btn-primary btn-lg" href="/dot" role="button">{data.site.siteMetadata.header_banner.cta_text}</a>
+                    <a class="btn btn-primary btn-lg" href={data.site.siteMetadata.header_banner.cta_url} role="button">{data.site.siteMetadata.header_banner.cta_text}</a>
                 </div>
             </div>
         )}
