@@ -21,8 +21,8 @@ It uses bootstrap css framework in order to simplify the customization.
 
     ```sh
     cd my-conference/
-    mv data/data.js.dist data/data.js
-    mv src/scss/custom.scss.dist src/scss/custom.scss
+    cp data/data.js.dist data/data.js
+    cp src/scss/custom.scss.dist src/scss/custom.scss
     gatsby develop
     ```
 
