@@ -11,7 +11,7 @@ It uses bootstrap css framework in order to simplify the customization.
     Use the Gatsby CLI to create a new site, specifying the hello-world starter.
 
     ```sh
-    # create a new Gatsby site using the hello-world starter
+    # create a new Gatsby conference site using the conferencer starter
     gatsby new my-conference https://github.com/asiermarques/gatsby-starter-conferencer
     ```
 
