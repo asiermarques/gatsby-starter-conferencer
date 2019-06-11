@@ -4,6 +4,39 @@ module.exports =
     "conference_claim": "A great conference for developers and other mystical creatures",
     "header_banner": {
         "cta_pre_text": "100 early-bird tickets left",
-        "cta_text": "Tickets on sale!"
-    }
+        "cta_text": "Tickets on sale!",
+        "cta_url": "https://awesome_url_for_your_ticketing_platform.com"
+    },
+    "speakers": [
+        {
+            "slug": "sara-smith",
+            "image": "https://randomuser.me/api/portraits/women/40.jpg",
+            "name": "Sara Smith",
+            "company": "CTO Tyller Corp.",
+        },
+        {
+            "slug": "sara-smith",
+            "image": "https://randomuser.me/api/portraits/women/40.jpg",
+            "name": "Sara Smith",
+            "company": "CTO Tyller Corp.",
+        },
+        {
+            "slug": "sara-smith",
+            "image": "https://randomuser.me/api/portraits/women/40.jpg",
+            "name": "Sara Smith",
+            "company": "CTO Tyller Corp.",
+        },
+        {
+            "slug": "sara-smith",
+            "image": "https://randomuser.me/api/portraits/women/40.jpg",
+            "name": "Sara Smith",
+            "company": "CTO Tyller Corp.",
+        },
+        {
+            "slug": "sara-smith",
+            "image": "https://randomuser.me/api/portraits/women/40.jpg",
+            "name": "Sara Smith",
+            "company": "CTO Tyller Corp.",
+        },
+    ]
 }
