@@ -2,10 +2,16 @@ module.exports =
 {
     "conference_name": "Our awesome conference",
     "conference_claim": "A great conference for developers and other mystical creatures",
+    "conference_hashtag": "#hashtag",
     "header_banner": {
         "cta_pre_text": "100 early-bird tickets left",
         "cta_text": "Tickets on sale!",
         "cta_url": "https://awesome_url_for_your_ticketing_platform.com"
+    },
+    "home": {
+        "title": "Your awesome",
+        "description": "A little description for the conference, what is the audience, why is interesting to the people and this kind of stuff",
+        "agenda_cta_text": "view the agenda"
     },
     "speakers": [
         {
