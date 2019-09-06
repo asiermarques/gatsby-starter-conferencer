@@ -58,7 +58,8 @@ export default () => (
             return (
             <section id="agenda">
                 <div class="container">
-                    <h2 class="display-4">Agenda</h2>
+                    <h2 class="text-center">Agenda</h2>
+                    <div class="table-responsive-sm">
                     <table id="agenda-table" class="table table-striped stacktable large-only">
                             <thead>
                             <tr>
@@ -90,7 +91,8 @@ export default () => (
                                 )
                             })}
                             </tbody>
-</table>
+                    </table>
+                    </div>
                 </div>
             </section>
         )}}

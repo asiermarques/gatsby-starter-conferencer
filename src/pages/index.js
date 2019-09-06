@@ -15,22 +15,21 @@ export default ({data}) => <Layout>
           <link rel="canonical" href="{data.site.siteMetadata.conference_claim}" />
     </Helmet>
     <Header/>
-    <div class="container">
+    <div id="content" class="container">
 
-        <div id="presentation" class="text-center">
+        <section id="presentation" class="text-center">
             <h2>{data.site.siteMetadata.home.title} <span>{data.site.siteMetadata.conference_hashtag}</span></h2>
             <p>{data.site.siteMetadata.home.description}</p>
             <p>
                 <a href="#agenda">{data.site.siteMetadata.home.agenda_cta_text}</a>
             </p>
-            <hr/>
-        </div>
+        </section>
 
-        <div id="speakers" class="row">
+        <section id="speakers" class="row">
             {data.site.siteMetadata.speakers.map((speaker, i) => {
-                return (<div class="col-4"><SpeakerCard imageUrl={speaker.image} name={speaker.name} company={speaker.company}/></div>)
+                return (<div class="col-lg-4 col-sm-6 col-xs-12"><SpeakerCard imageUrl={speaker.image} name={speaker.name} company={speaker.company}/></div>)
             })}
-        </div>
+        </section>
 
         <Agenda/>
 

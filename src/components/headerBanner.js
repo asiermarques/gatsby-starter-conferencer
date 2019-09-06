@@ -21,7 +21,7 @@ export default () => (
         `}
         render={ data => (
             <div class="jumbotron">
-                <div class="container">
+                <div class="container text-center">
                     <h1 class="display-4">{data.site.siteMetadata.conference_name}</h1>
                     <p class="lead">{data.site.siteMetadata.conference_claim}</p>
                     <hr class="my-4"/>

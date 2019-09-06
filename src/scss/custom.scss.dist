@@ -1,4 +1,11 @@
 $enable-rounded: false;
 
+section{
+  margin: 60px 0;
+}
+#speakers .card{
+    margin-bottom: 30px
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
