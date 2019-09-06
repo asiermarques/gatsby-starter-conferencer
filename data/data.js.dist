@@ -1,5 +1,6 @@
 module.exports =
 {
+    "canonical_url": "http://awesomeconference.change",
     "conference_name": "Our awesome conference",
     "conference_claim": "A great conference for developers and other mystical creatures",
     "conference_hashtag": "#hashtag",

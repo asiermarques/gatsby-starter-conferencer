@@ -7,5 +7,5 @@ var _data = require("./data/data.js")
 
 module.exports = {
   siteMetadata: _data,
-  plugins: [`gatsby-plugin-sass`]
+  plugins: [`gatsby-plugin-react-helmet`,`gatsby-plugin-sass`]
 }

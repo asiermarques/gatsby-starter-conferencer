@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SpeakerCard from "../components/speakerCard"
 import Header from "../components/headerBanner"
@@ -8,6 +9,11 @@ import { graphql} from "gatsby"
 
 export default ({data}) => <Layout>
 
+    <Helmet>
+          <meta charSet="utf-8" />
+          <title>{data.site.siteMetadata.conference_name} {data.site.siteMetadata.conference_hashtag}</title>
+          <link rel="canonical" href="{data.site.siteMetadata.conference_claim}" />
+    </Helmet>
     <Header/>
     <div class="container">
 
@@ -37,7 +43,10 @@ export const query = graphql`
   query HomePageQuery {
     site {
       siteMetadata {
-        conference_hashtag
+        canonical_url,
+        conference_hashtag,
+        conference_name,
+        conference_claim
         home {
             title
             description
