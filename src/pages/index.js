@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import SpeakerCard from "../components/speakerCard"
 import Header from "../components/headerBanner"
+import Agenda from "../components/agenda"
 import { graphql} from "gatsby"
 
 
@@ -10,7 +11,7 @@ export default ({data}) => <Layout>
     <Header/>
     <div class="container">
 
-        <div class="text-center">
+        <div id="presentation" class="text-center">
             <h2>{data.site.siteMetadata.home.title} <span>{data.site.siteMetadata.conference_hashtag}</span></h2>
             <p>{data.site.siteMetadata.home.description}</p>
             <p>
@@ -19,13 +20,15 @@ export default ({data}) => <Layout>
             <hr/>
         </div>
 
-        <div class="row">
+        <div id="speakers" class="row">
             {data.site.siteMetadata.speakers.map((speaker, i) => {
-                console.log("Entered");
-                // Return the element. Also pass key
                 return (<div class="col-4"><SpeakerCard imageUrl={speaker.image} name={speaker.name} company={speaker.company}/></div>)
             })}
         </div>
+
+        <Agenda/>
+
+
     </div>
 
 </Layout>
