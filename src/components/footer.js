@@ -86,6 +86,16 @@ export default () => (
             <h2 class="text-center">Sponsors</h2>
 
         </section>
+
+        <section>
+            <div className="container">
+                <hr></hr>
+                Made with the <a href="https://github.com/asiermarques/gatsby-starter-conferencer">Gatsby Conferencer starter</a>
+            </div>
+        </section>
+
+                
+
     </footer>
         )}
     />

@@ -34,7 +34,7 @@ const SpeakerTemplate = context => {
             <div className="container">
 
                 <div className="row">
-                    <div className="col-md-2 text-center">
+                    <div className="col-md-4 text-center">
                         <img src={speaker.image} alt={speaker.name}/>
                     </div>
                     <div className="col-md-8">
@@ -46,24 +46,15 @@ const SpeakerTemplate = context => {
                             {speaker.social.linkedin ? <a href={speaker.social.linkedin}><FaLinkedin/></a> : ""}
                             
                         </p>
-                        <h3>About</h3>
+                        <h4>About</h4>
                         <p>{speaker.bio}</p>
 
                         <hr></hr>
-                        
-                        <h3>{speaker.talk.title}</h3>
+
+                        <h4>{speaker.talk.title}</h4>
                         <p>{speaker.talk.description}</p>
                     </div>
 
-                </div>
-
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <h4 class="mt-0"></h4>
-                        <h5></h5>
-                        <p>{speaker.bio}</p>    
-                    </div>
                 </div>
 
             </div>
