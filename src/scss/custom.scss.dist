@@ -1,10 +1,18 @@
 $enable-rounded: false;
 
-section{
+section, Footer{
   margin: 60px 0;
 }
+
 #speakers .card{
     margin-bottom: 30px
+}
+
+#page{
+    h1{
+        margin-bottom: 45px;
+        text-align: center;
+    }
 }
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

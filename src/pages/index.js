@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import SpeakerCard from "../components/speakerCard"
 import Header from "../components/headerBanner"
 import Agenda from "../components/agenda"
+import Footer from "../components/footer"
 import { graphql} from "gatsby"
 
 
@@ -27,14 +28,14 @@ export default ({data}) => <Layout>
 
         <section id="speakers" class="row">
             {data.site.siteMetadata.speakers.map((speaker, i) => {
-                return (<div class="col-lg-4 col-sm-6 col-xs-12"><SpeakerCard imageUrl={speaker.image} name={speaker.name} company={speaker.company}/></div>)
+                return (<div class="col-lg-4 col-sm-6 col-xs-12"><SpeakerCard speaker={speaker}/></div>)
             })}
         </section>
 
         <Agenda/>
-
-
     </div>
+
+    <Footer/>
 
 </Layout>
 
@@ -56,6 +57,11 @@ export const query = graphql`
             image,
             name,
             company
+        }
+        organizers {
+          name
+          link
+          image
         }
       }
     }

@@ -74,10 +74,10 @@ export default () => (
                                     <td class="time">{time_range}</td>
                                     {content.map( content_item => {
                                         
-                                        if(content_item.type === "speaker") { console.log(content_item)
+                                        if(content_item.type === "speaker") { 
                                             return (
                                                 <td>
-                                                    <a href="#">
+                                                    <a href={content_item.content.slug + "#talk"}>
                                                         <h5>{content_item.content.talk_title}</h5>
                                                         <p>{content_item.content.name}</p>
                                                     </a>
