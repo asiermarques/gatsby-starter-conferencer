@@ -12,8 +12,10 @@ export default () => (
                         slug,
                         name,
                         company,
-                        talk_title,
-                        talk_description
+                        talk{
+                            title,
+                            description
+                        }
                     },
                     agenda {
                         visible,
@@ -78,7 +80,7 @@ export default () => (
                                             return (
                                                 <td>
                                                     <a href={content_item.content.slug + "#talk"}>
-                                                        <h5>{content_item.content.talk_title}</h5>
+                                                        <h5>{content_item.content.talk.title}</h5>
                                                         <p>{content_item.content.name}</p>
                                                     </a>
                                                 </td>

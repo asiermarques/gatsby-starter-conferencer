@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
-import Header from "../components/headerBanner"
+import Header from "../components/headerInner"
 import Footer from "../components/footer"
 import { FaArrowLeft, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { graphql} from "gatsby"
@@ -33,11 +33,35 @@ const SpeakerTemplate = context => {
 
             <div className="container">
 
-                <div class="media">
-                    <img src={speaker.image} alt={speaker.name}/>
-                    <div class="media-body">
-                        <h4 class="mt-0">{speaker.name}</h4>
+                <div className="row">
+                    <div className="col-md-2 text-center">
+                        <img src={speaker.image} alt={speaker.name}/>
+                    </div>
+                    <div className="col-md-8">
+                        <h1>{speaker.name}</h1>
                         <h5>{speaker.company}</h5>
+                        <p>
+                            {speaker.social.twitter ? <a href={speaker.social.twitter}><FaTwitter/></a> : ""}&nbsp;
+                            {speaker.social.github ? <a href={speaker.social.github}><FaGithub/></a> : ""}&nbsp;
+                            {speaker.social.linkedin ? <a href={speaker.social.linkedin}><FaLinkedin/></a> : ""}
+                            
+                        </p>
+                        <h3>About</h3>
+                        <p>{speaker.bio}</p>
+
+                        <hr></hr>
+                        
+                        <h3>{speaker.talk.title}</h3>
+                        <p>{speaker.talk.description}</p>
+                    </div>
+
+                </div>
+
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <h4 class="mt-0"></h4>
+                        <h5></h5>
                         <p>{speaker.bio}</p>    
                     </div>
                 </div>

@@ -51,28 +51,27 @@ export default () => (
           <div class="container">
 
               <div class="row">
-                    <div class="col-md-8">
+                    <div class="col-md-7">
 
                       <h3>Organizers</h3>
-                      <div class="organization-people row">
+                      <div class="row justify-content-start">
                         {data.site.siteMetadata.organizers.map( organizer => 
-                            <div class="col-sm-3 col-xs-6">
+                            <div class="col-6 col-md-3">
                                 <a href={organizer.link} title={organizer.name} 
                                 target="_blank" 
-                                rel="noopener noreferrer" 
-                                class="thumbnail">
-                                    <img src={organizer.image} alt={organizer.name}/>
+                                rel="noopener noreferrer">
+                                    <img src={organizer.image} alt={organizer.name}  class="img-thumbnail"/>
                                 </a>
                             </div>
                         )}
                     </div>
                     </div>
 
-                    <div class="col-md-4">
+                    <div class="col-md-5 text-center">
 
                       <h4>About</h4>
-                      <ul>
-                          <li><a href="/code-of-conduct">Code of conduct</a></li>
+                      <ul className="nav flex-column">
+                          <li className="nav-item"><a href="/code-of-conduct" className="nav-link">Code of conduct</a></li>
                       </ul>
 
                     </div>

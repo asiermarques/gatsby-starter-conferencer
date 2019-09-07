@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
-import Header from "../components/headerBanner"
+import Header from "../components/headerInner"
 import Footer from "../components/footer"
 import { FaArrowLeft } from 'react-icons/fa'
 import { graphql} from "gatsby"

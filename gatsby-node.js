@@ -53,7 +53,17 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             slug,
             image,
             name,
-            company
+            bio,
+            company,
+            social {
+                twitter,
+                linkedin,
+                github
+            }
+                talk{
+                title,
+                description
+            }
         }
         }
     }
