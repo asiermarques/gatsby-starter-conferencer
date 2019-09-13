@@ -24,7 +24,7 @@ export default () => (
                 <div class="container">
                     <div className="row">
                         <div className="col-sm-7">
-                            <h2 class="display-4">{data.site.siteMetadata.conference_name}</h2>
+                            <a href="/"><h2 class="display-4">{data.site.siteMetadata.conference_name}</h2></a>
                             <p class="lead">{data.site.siteMetadata.conference_claim}</p>
                         </div>
                         <div className="col-sm-5 text-center">

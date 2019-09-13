@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import Sponsors from "./sponsors"
 
 
 export default () => (
@@ -25,8 +26,8 @@ export default () => (
                     company
                 }
                 organizers {
-                  name
-                  link
+                  name,
+                  link,
                   image
                 }
               }
@@ -46,7 +47,7 @@ export default () => (
             </div>
         </section>
 
-        <section id="who">
+        <section id="about">
 
           <div class="container">
 
@@ -81,11 +82,7 @@ export default () => (
 
         </section>
 
-        <section id="sponsors">
-
-            <h2 class="text-center">Sponsors</h2>
-
-        </section>
+        <Sponsors/>
 
         <section>
             <div className="container">
