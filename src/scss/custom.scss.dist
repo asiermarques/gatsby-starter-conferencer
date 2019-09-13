@@ -15,5 +15,16 @@ section, Footer{
     }
 }
 
+#sponsors {
+    text-align: center;
+    h3{
+        margin-top: 2em;
+    }
+    .sponsor{
+        display: inline-block;
+        margin: 2em 1.5em;
+    }
+}
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 

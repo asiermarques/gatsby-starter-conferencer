@@ -82,5 +82,44 @@ module.exports =
             "name": "Sara Smith",
             "link": "https://asiermarques.com"
         }
+    ],
+    "sponsor_blocks": [
+        {
+            "name": "Uranium",
+            "height_em": "15",
+            "sponsors": [
+                {
+                    "name": "Tyrell Corp.",
+                    "link": "https://fail.fail",
+                    "image": "https://i.pinimg.com/originals/29/5f/46/295f46ebc17f5ad4a8f49dcc343ea5cb.png"
+                },
+                {
+                    "name": "Black Mesa",
+                    "link": "https://fail.fail",
+                    "image": "https://www.logolynx.com/images/logolynx/b8/b8222d298046075f9f7a8c25d8f6ab70.png"
+                }
+            ]
+        },
+        {
+            "name": "Platinium",
+            "height_em": "10",
+            "sponsors": [
+                {
+                    "name": "IN Gen",
+                    "link": "https://fail.fail",
+                    "image": "https://vignette.wikia.nocookie.net/jurassicpark/images/b/b0/Ingenicon3.png/revision/latest?cb=20190802232451"
+                },
+                {
+                    "name": "Umbrella Corp",
+                    "link": "https://fail.fail",
+                    "image": "https://www.logolynx.com/images/logolynx/90/909b21a35004655d48b75041f04d1bc0.png"
+                },
+                {
+                    "name": "Waine Enterprises",
+                    "link": "https://fail.fail",
+                    "image": "https://t1.rbxcdn.com/8609d8c6322a6bc6d8652b524570c0ec"
+                }
+            ]
+        }
     ]
 }
