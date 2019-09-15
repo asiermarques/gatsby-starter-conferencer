@@ -1,5 +1,7 @@
 # Gatsby Conferencer
 
+[![CircleCI](https://circleci.com/gh/asiermarques/gatsby-starter-conferencer.svg?style=svg)](https://circleci.com/gh/asiermarques/gatsby-starter-conferencer)
+
 A conference website template starter for Gatsby.
 
 It uses bootstrap css framework in order to simplify the customization.
