@@ -3,9 +3,9 @@ import React from "react"
 export default ({ sponsorBlocks }) => {
 
     const has_sponsors = !!sponsorBlocks.map( block => block.sponsors.length )
-                                         .reduce((prev, current) => prev + current, 0);
+                                         .reduce((prev, current) => prev + current, 0)
     
-    return (<section id="sponsors">
+    return <section id="sponsors">
                 <div className="container">
                     {has_sponsors && <>    
                         <h2>Our sponsors</h2>
@@ -26,5 +26,5 @@ export default ({ sponsorBlocks }) => {
                         ))}
                     </>}
                 </div>
-            </section>);
+            </section>
 }
