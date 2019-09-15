@@ -117,3 +117,107 @@ exports[`Sponsors renders correctly without any sponsor 1`] = `
   />
 </section>
 `;
+
+exports[`Sponsors renders correctly without sponsor block titles 1`] = `
+<section
+  id="sponsors"
+>
+  <div
+    className="container"
+  >
+    <h2>
+      Our sponsors
+    </h2>
+    <div
+      className="sponsor_block"
+    >
+      
+      <a
+        class="sponsor"
+        href="https://fail.fail"
+        title="Tyrell Corp."
+      >
+        <img
+          alt="Tyrell Corp."
+          src="/test1.png"
+          style={
+            Object {
+              "height": "15em",
+              "width": "auto",
+            }
+          }
+        />
+      </a>
+      <a
+        class="sponsor"
+        href="https://fail.fail"
+        title="Black Mesa"
+      >
+        <img
+          alt="Black Mesa"
+          src="/test2.png"
+          style={
+            Object {
+              "height": "15em",
+              "width": "auto",
+            }
+          }
+        />
+      </a>
+    </div>
+    <div
+      className="sponsor_block"
+    >
+      
+      <a
+        class="sponsor"
+        href="https://fail.fail"
+        title="IN Gen"
+      >
+        <img
+          alt="IN Gen"
+          src="/test3.png"
+          style={
+            Object {
+              "height": "10em",
+              "width": "auto",
+            }
+          }
+        />
+      </a>
+      <a
+        class="sponsor"
+        href="https://fail.fail"
+        title="Umbrella Corp"
+      >
+        <img
+          alt="Umbrella Corp"
+          src="/test4.png"
+          style={
+            Object {
+              "height": "10em",
+              "width": "auto",
+            }
+          }
+        />
+      </a>
+      <a
+        class="sponsor"
+        href="https://fail.fail"
+        title="Waine Enterprises"
+      >
+        <img
+          alt="Waine Enterprises"
+          src="/test5.png"
+          style={
+            Object {
+              "height": "10em",
+              "width": "auto",
+            }
+          }
+        />
+      </a>
+    </div>
+  </div>
+</section>
+`;

@@ -14,7 +14,7 @@ export const PureSponsors = ({ data }) => {
 
                         {sponsor_blocks.map( (block, index_block) => (
                         <div key={index_block} className="sponsor_block">
-                            <h3>{block.name}</h3>
+                            {block.name && <h3>{block.name}</h3>}
                             {block.sponsors.map( (sponsor, index) => <a key={index}
                                                                         href={sponsor.link} 
                                                                         title={sponsor.name}
