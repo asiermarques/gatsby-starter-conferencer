@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { from } from "rxjs";
 import agendaMapper from "../lib/agendaMapper"
 import agendaSlotType from "../lib/agendaSlotTypes";
 

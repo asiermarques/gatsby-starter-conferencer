@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import LocationMap from "./locationMap"
-import Sponsors from "./sponsors"
+import {Sponsors} from "./sponsors"
 
 
 export default () => (

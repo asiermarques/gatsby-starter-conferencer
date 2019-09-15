@@ -53,6 +53,7 @@ export default () => (
                     <iframe src={location.gmaps_iframe_url}
                     width="100%" 
                     height="550" 
+                    title="map"
                     frameborder="0" 
                     allowfullscreen="false"></iframe>
                   </div>
