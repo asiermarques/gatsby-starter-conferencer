@@ -4,7 +4,7 @@ import Agenda from "../../src/components/agenda"
 import AgendaConfigFixture from "../__fixtures/AgendaConfig"
 import SpeakerFixture from "../__fixtures/Speaker"
 
-describe("Sponsors", () => {
+describe("Agenda", () => {
   it("renders correctly", () => {
     const tree = renderer.create(<Agenda agenda={AgendaConfigFixture} speakers={[SpeakerFixture]}/>).toJSON()
     expect(tree).toMatchSnapshot()
