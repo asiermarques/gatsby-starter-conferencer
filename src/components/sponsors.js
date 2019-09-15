@@ -5,7 +5,7 @@ export const PureSponsors = ({ data }) => {
             
     const sponsor_blocks = data.site.siteMetadata.sponsor_blocks;
     const has_sponsors = !!sponsor_blocks.map( block => block.sponsors.length )
-                                         .reduce((prev, current) => prev + current);
+                                         .reduce((prev, current) => prev + current, 0);
     
     return (<section id="sponsors">
                 <div className="container">

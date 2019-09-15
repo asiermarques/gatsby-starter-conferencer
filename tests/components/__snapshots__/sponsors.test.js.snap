@@ -107,3 +107,13 @@ exports[`Sponsors renders correctly 1`] = `
   </div>
 </section>
 `;
+
+exports[`Sponsors renders correctly without any sponsor 1`] = `
+<section
+  id="sponsors"
+>
+  <div
+    className="container"
+  />
+</section>
+`;
