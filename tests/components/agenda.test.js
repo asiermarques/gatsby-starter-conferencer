@@ -6,15 +6,7 @@ import SpeakerFixture from "../__fixtures/Speaker"
 
 describe("Sponsors", () => {
   it("renders correctly", () => {
-    const data = {
-        site: {
-          siteMetadata: {
-            "agenda": AgendaConfigFixture,
-            "speakers": [SpeakerFixture]
-          },
-        },
-      }
-    const tree = renderer.create(<Agenda data={data}/>).toJSON()
+    const tree = renderer.create(<Agenda agenda={AgendaConfigFixture} speakers={[SpeakerFixture]}/>).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })

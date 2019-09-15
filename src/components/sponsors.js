@@ -1,10 +1,9 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
-export const PureSponsors = ({ data }) => {
-            
-    const sponsor_blocks = data.site.siteMetadata.sponsor_blocks;
-    const has_sponsors = !!sponsor_blocks.map( block => block.sponsors.length )
+export const PureSponsors = ({ sponsorBlocks }) => {
+
+    const has_sponsors = !!sponsorBlocks.map( block => block.sponsors.length )
                                          .reduce((prev, current) => prev + current, 0);
     
     return (<section id="sponsors">
@@ -12,7 +11,7 @@ export const PureSponsors = ({ data }) => {
                     {has_sponsors && <>    
                         <h2>Our sponsors</h2>
 
-                        {sponsor_blocks.map( (block, index_block) => (
+                        {sponsorBlocks.map( (block, index_block) => (
                         <div key={index_block} className="sponsor_block">
                             {block.name && <h3>{block.name}</h3>}
                             {block.sponsors.map( (sponsor, index) => <a key={index}
@@ -50,6 +49,6 @@ export const Sponsors = props => (
             }
         }
         `}
-        render={data => <PureSponsors {...props} data={data} />}
+        render={data => <PureSponsors {...props} sponsorBlocks={data.site.siteMetadata.sponsor_blocks} />}
     />
 )

@@ -3,17 +3,16 @@ import { graphql, StaticQuery } from "gatsby"
 import agendaMapper from "../lib/agendaMapper"
 import agendaSlotType from "../lib/agendaSlotTypes";
 
-export const PureAgenda = ({ data }) => {
-            
-    const tracks = data.site.siteMetadata.agenda.tracks;
-    const agenda = agendaMapper(data.site.siteMetadata.agenda, data.site.siteMetadata.speakers);
+export const PureAgenda = ({agenda, speakers}) => {
+    const tracks = agenda.tracks;
+    const agendaSlotMap = agendaMapper(agenda, speakers);
     
     return (
     <section id="agenda">
-        <div class="container">
-            <h2 class="text-center">Agenda</h2>
-            <div class="table-responsive-sm">
-            <table id="agenda-table" class="table table-striped stacktable large-only">
+        <div className="container">
+            <h2 className="text-center">Agenda</h2>
+            <div className="table-responsive-sm">
+            <table id="agenda-table" className="table table-striped stacktable large-only">
                     <thead>
                     <tr>
                         <th></th>
@@ -21,7 +20,7 @@ export const PureAgenda = ({ data }) => {
                     </tr>
                     </thead>
                     <tbody>
-                    {agenda.map( (slot, slot_index) => { 
+                    {agendaSlotMap.map( (slot, slot_index) => { 
                         const [time_range, ...content] = slot;
                         return (<tr key={slot_index}>
                             <td class="time">{time_range}</td>
@@ -80,6 +79,8 @@ export const Agenda = props => (
             }
         }
         `}
-        render={data => <PureAgenda {...props} data={data} />}
+        render={data => <PureAgenda agenda={data.site.siteMetadata.agenda} 
+                                    speakers={data.site.siteMetadata.speakers} 
+                                    {...props}/>}
     />
 )

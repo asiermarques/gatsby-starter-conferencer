@@ -1,11 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
-export const PureLocationMap = ({ data }) => {
-            
-  const location = data.site.siteMetadata.location;
-  return (
-    <section id="where">
+export const PureLocationMap = ({ location }) => <section id="where">
         <h2 class="text-center">Location</h2>
         <div class="content_wrap">
 
@@ -40,8 +36,6 @@ export const PureLocationMap = ({ data }) => {
           allowfullscreen="false"></iframe>
         </div>
     </section>
-  );
-}
 
 export const LocationMap = props => (
     <StaticQuery
@@ -61,6 +55,6 @@ export const LocationMap = props => (
             }
           }
         `}
-        render={data => <PureLocationMap {...props} data={data} />}
+        render={data => <PureLocationMap {...props} location={data.site.siteMetadata.location} />}
     />
 )

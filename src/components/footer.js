@@ -36,7 +36,7 @@ export default () => (
 
               <div class="row">
                     <div class="col-md-7">
-                      <Organizers items={data.site.siteMetadata.organizers}/>
+                      <Organizers organizers={data.site.siteMetadata.organizers}/>
                     </div>
 
                     <div class="col-md-5 text-center">

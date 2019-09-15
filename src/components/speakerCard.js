@@ -1,9 +1,9 @@
 import React from "react"
 
-export default (props) => <a class="card speaker" href={props.speaker.slug}>
-    <div class="image" style={{backgroundImage: `url('${props.speaker.image}')`}}></div>
+export default ({speaker}) => <a class="card speaker" href={speaker.slug}>
+    <div class="image" style={{backgroundImage: `url('${speaker.image}')`}}></div>
     <div class="card-body">
-        <h5 class="card-title">{props.speaker.name}</h5>
-        <p class="card-text">{props.speaker.company}</p>
+        <h5 class="card-title">{speaker.name}</h5>
+        <p class="card-text">{speaker.company}</p>
     </div>
 </a>

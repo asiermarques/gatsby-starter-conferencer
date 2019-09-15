@@ -5,14 +5,7 @@ import LocationConfigFixture from "../__fixtures/LocationConfig"
 
 describe("LocationMap", () => {
   it("renders correctly", () => {
-    const data = {
-        site: {
-          siteMetadata: {
-            "location": LocationConfigFixture
-          },
-        },
-      }
-    const tree = renderer.create(<LocationMap data={data}/>).toJSON()
+    const tree = renderer.create(<LocationMap location={LocationConfigFixture}/>).toJSON()
     expect(tree).toMatchSnapshot()
   });
 })

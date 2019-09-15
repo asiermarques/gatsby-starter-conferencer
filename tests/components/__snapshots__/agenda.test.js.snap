@@ -5,18 +5,18 @@ exports[`Sponsors renders correctly 1`] = `
   id="agenda"
 >
   <div
-    class="container"
+    className="container"
   >
     <h2
-      class="text-center"
+      className="text-center"
     >
       Agenda
     </h2>
     <div
-      class="table-responsive-sm"
+      className="table-responsive-sm"
     >
       <table
-        class="table table-striped stacktable large-only"
+        className="table table-striped stacktable large-only"
         id="agenda-table"
       >
         <thead>

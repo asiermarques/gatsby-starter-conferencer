@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SpeakerCard renders correctly 1`] = `
+exports[`Organizers renders correctly 1`] = `
 Array [
   <h3>
     Organizers
