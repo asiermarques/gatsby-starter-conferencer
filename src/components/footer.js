@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import LocationMap from "./locationMap"
 import Sponsors from "./sponsors"
 
 
@@ -13,7 +14,6 @@ export default () => (
                 conference_hashtag,
                 conference_name,
                 conference_claim,
-                gmaps_iframe_url,
                 home {
                     title
                     description
@@ -35,17 +35,8 @@ export default () => (
           }
         `}
         render={ data => (
-<footer>
-        <section id="where">
-            <h2 class="text-center">Location</h2>
-            <div>
-              <iframe src={data.site.siteMetadata.gmaps_iframe_url}
-              width="100%" 
-              height="550" 
-              frameborder="0" 
-              allowfullscreen="false"></iframe>
-            </div>
-        </section>
+    <footer>
+        <LocationMap/>
 
         <section id="about">
 
