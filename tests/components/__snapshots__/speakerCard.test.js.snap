@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpeakerCard renders correctly 1`] = `
+<a
+  class="card speaker"
+  href="sara-smith"
+>
+  <div
+    class="image"
+    style={
+      Object {
+        "backgroundImage": "url('/assets/img/tests.jpg')",
+      }
+    }
+  />
+  <div
+    class="card-body"
+  >
+    <h5
+      class="card-title"
+    >
+      Sara Smith
+    </h5>
+    <p
+      class="card-text"
+    >
+      CTO Tyller Corp.
+    </p>
+  </div>
+</a>
+`;
