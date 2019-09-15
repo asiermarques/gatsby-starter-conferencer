@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderHome renders correctly 1`] = `
+<div
+  class="jumbotron"
+>
+  <div
+    class="container text-center"
+  >
+    <h1
+      class="display-4"
+    >
+      Our awesome conference
+    </h1>
+    <p
+      class="lead"
+    >
+      A great conference for developers and other mystical creatures
+    </p>
+    <hr
+      class="my-4"
+    />
+    <p>
+      100 early-bird tickets left
+    </p>
+    <a
+      class="btn btn-primary btn-lg"
+      href="https://awesome_url_for_your_ticketing_platform.com"
+      role="button"
+    >
+      Tickets on sale!
+    </a>
+  </div>
+</div>
+`;

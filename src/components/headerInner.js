@@ -1,8 +1,24 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
+export const PureHeader = ({ data }) => (
+    <div class="jumbotron">
+        <div class="container">
+            <div className="row">
+                <div className="col-sm-7">
+                    <a href="/"><h2 class="display-4">{data.site.siteMetadata.conference_name}</h2></a>
+                    <p class="lead">{data.site.siteMetadata.conference_claim}</p>
+                </div>
+                <div className="col-sm-5 text-center">
+                    <p>{data.site.siteMetadata.header_banner.cta_pre_text}</p>
+                    <a class="btn btn-primary btn-lg" href={data.site.siteMetadata.header_banner.cta_url} role="button">{data.site.siteMetadata.header_banner.cta_text}</a>
+                </div>
+            </div> 
+        </div>
+    </div>
+  )
 
-export default () => (
+export const Header = props => (
     <StaticQuery
         query={graphql`
         query {
@@ -19,21 +35,6 @@ export default () => (
             }
         }
         `}
-        render={ data => (
-            <div class="jumbotron">
-                <div class="container">
-                    <div className="row">
-                        <div className="col-sm-7">
-                            <a href="/"><h2 class="display-4">{data.site.siteMetadata.conference_name}</h2></a>
-                            <p class="lead">{data.site.siteMetadata.conference_claim}</p>
-                        </div>
-                        <div className="col-sm-5 text-center">
-                            <p>{data.site.siteMetadata.header_banner.cta_pre_text}</p>
-                            <a class="btn btn-primary btn-lg" href={data.site.siteMetadata.header_banner.cta_url} role="button">{data.site.siteMetadata.header_banner.cta_text}</a>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        )}
+        render={data => <PureHeader {...props} data={data} />}
     />
 )
