@@ -7,7 +7,7 @@ describe("Sponsors", () => {
   it("renders correctly", () => {
     const data = {
         site: {
-          siteMetadata: SponsorsConfigFixture,
+          siteMetadata: {"sponsor_blocks": SponsorsConfigFixture},
         },
       }
     const tree = renderer.create(<Sponsors data={data}/>).toJSON()
