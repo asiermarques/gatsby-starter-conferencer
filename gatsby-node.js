@@ -49,6 +49,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             description
             agenda_cta_text
         }
+        header_banner {
+          cta_pre_text,
+          cta_text,
+          cta_url
+        }
         speakers {
             slug,
             image,
@@ -76,13 +81,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
 
     const speakerTemplate = path.resolve(`src/templates/speaker-template.js`)
-    result.data.site.siteMetadata
-            .speakers.forEach( speaker  => {
+    const configData = result.data.site.siteMetadata
+    configData.speakers.forEach( speaker  => {
                 createPage({
                     path: speaker.slug,
                     component: speakerTemplate,
                     context: {
                         speaker,
+                        configData
                     },
                 })
             }

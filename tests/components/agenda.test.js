@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import {PureAgenda as Agenda} from "../../src/components/agenda"
+import Agenda from "../../src/components/agenda"
 import AgendaConfigFixture from "../__fixtures/AgendaConfig"
 import SpeakerFixture from "../__fixtures/Speaker"
 

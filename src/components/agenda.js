@@ -3,12 +3,11 @@ import { graphql, StaticQuery } from "gatsby"
 import agendaMapper from "../lib/agendaMapper"
 import agendaSlotType from "../lib/agendaSlotTypes";
 
-export const PureAgenda = ({agenda, speakers}) => {
+export default ({agenda, speakers}) => {
     const tracks = agenda.tracks;
     const agendaSlotMap = agendaMapper(agenda, speakers);
     
-    return (
-    <section id="agenda">
+    return <section id="agenda">
         <div className="container">
             <h2 className="text-center">Agenda</h2>
             <div className="table-responsive-sm">
@@ -47,40 +46,5 @@ export const PureAgenda = ({agenda, speakers}) => {
             </div>
         </div>
     </section>
-)}
+}
 
-export const Agenda = props => (
-    <StaticQuery
-        query={graphql`
-        query {
-            site {
-                siteMetadata {
-                    speakers {
-                        slug,
-                        name,
-                        company,
-                        talk{
-                            title,
-                            description
-                        }
-                    },
-                    agenda {
-                        visible,
-                        time_slots,
-                        tracks{ 
-                            name,
-                            content_in_slots {
-                                type,
-                                content
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        `}
-        render={data => <PureAgenda agenda={data.site.siteMetadata.agenda} 
-                                    speakers={data.site.siteMetadata.speakers} 
-                                    {...props}/>}
-    />
-)

@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import {PureSponsors as Sponsors} from "../../src/components/sponsors"
+import Sponsors from "../../src/components/sponsors"
 import {WITH_BLOCK_TITLES as SponsorsConfigFixture, WITHOUT_BLOCK_TITLES as SponsorsWOTitleConfigFixture} from "../__fixtures/SponsorsConfig"
 
 describe("Sponsors", () => {

@@ -1,6 +1,6 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import {PureLocationMap as LocationMap} from "../../src/components/locationMap"
+import LocationMap from "../../src/components/locationMap"
 import LocationConfigFixture from "../__fixtures/LocationConfig"
 
 describe("LocationMap", () => {

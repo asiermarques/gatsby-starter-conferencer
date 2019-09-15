@@ -1,12 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
-import {Header} from "../components/headerInner"
+import Header from "../components/headerInner"
 import Footer from "../components/footer"
 import { FaArrowLeft, FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 const SpeakerTemplate = context => {
   const speaker = context.pageContext.speaker;
+  const configData = context.pageContext.configData;
   return (
     <Layout>
 
@@ -15,7 +16,7 @@ const SpeakerTemplate = context => {
             <title>{speaker.name}</title>
         </Helmet>
 
-        <Header/>
+        <Header data={configData}/>
 
         <section>
             <div className="container">

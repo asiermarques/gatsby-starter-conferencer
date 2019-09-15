@@ -1,18 +1,19 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
-import {Header} from "../components/headerInner"
+import Header from "../components/headerInner"
 import Footer from "../components/footer"
 import { FaArrowLeft } from 'react-icons/fa'
 import { graphql} from "gatsby"
 
 
 export default function PageTemplate({
-    data, // this prop will be injected by the GraphQL query below.
+    data, 
   }){
   const { markdownRemark } = data 
   const { frontmatter, html } = markdownRemark
   const title = frontmatter.title
+  const configData = data.site.siteMetadata
 
   return (
     <Layout>
@@ -22,7 +23,7 @@ export default function PageTemplate({
             <title>{title}</title>
         </Helmet>
 
-        <Header/>
+        <Header data={configData}/>
 
         <section>
             <div className="container">
@@ -65,6 +66,20 @@ export const pageQuery = graphql`
         path
         title
       }
+    }
+    site {
+      siteMetadata {
+        canonical_url,
+        conference_hashtag,
+        conference_name,
+        conference_claim,
+        header_banner {
+          cta_pre_text,
+          cta_text,
+          cta_url
+        }
+      }
+      
     }
   }
 `

@@ -1,7 +1,6 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
 
-export const PureLocationMap = ({ location }) => <section id="where">
+export default ({ location }) => <section id="where">
         <h2 class="text-center">Location</h2>
         <div class="content_wrap">
 
@@ -36,25 +35,3 @@ export const PureLocationMap = ({ location }) => <section id="where">
           allowfullscreen="false"></iframe>
         </div>
     </section>
-
-export const LocationMap = props => (
-    <StaticQuery
-        query={graphql`
-        query {
-            site {
-              siteMetadata {
-                location {
-                  gmaps_iframe_url,
-                  addresses {
-                    name,
-                    line,
-                    map_link
-                  }
-                }
-              }
-            }
-          }
-        `}
-        render={data => <PureLocationMap {...props} location={data.site.siteMetadata.location} />}
-    />
-)

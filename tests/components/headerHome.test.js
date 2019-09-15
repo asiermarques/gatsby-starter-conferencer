@@ -1,16 +1,11 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import {PureHeader as Header} from "../../src/components/headerHome"
+import Header from "../../src/components/headerHome"
 import HeaderConfigFixture from "../__fixtures/HeaderConfig"
 
 describe("HeaderHome", () => {
   it("renders correctly", () => {
-    const data = {
-        site: {
-          siteMetadata: HeaderConfigFixture,
-        },
-      }
-    const tree = renderer.create(<Header  data={data}/>).toJSON()
+    const tree = renderer.create(<Header  data={HeaderConfigFixture}/>).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
