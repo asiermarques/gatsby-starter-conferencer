@@ -17,11 +17,12 @@ export default ({ sponsorBlocks }) => {
                                                                         href={sponsor.link} 
                                                                         title={sponsor.name}
                                                                         class="sponsor">
-                                    <img src={sponsor.image} alt={sponsor.name} style={{
-                                height: block.height_em + 'em',
-                                width: 'auto'
-                                }}/></a>
-                            )}
+                                    <img src={sponsor.image} alt={sponsor.name} 
+                                         style={{
+                                            height: block.height_em + 'em',
+                                            width: 'auto'
+                                            }}/>
+                            </a> )}
                         </div>
                         ))}
                     </>}
