@@ -2,7 +2,7 @@ import React from "react"
 import renderer from "react-test-renderer"
 
 import SpeakerCard from "../../src/components/speakerCard"
-import SpeakerFixture from "../fixtures/Speaker"
+import SpeakerFixture from "../__fixtures/Speaker"
 
 describe("SpeakerCard", () => {
   it("renders correctly", () => {

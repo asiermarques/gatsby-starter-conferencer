@@ -1,5 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import { from } from "rxjs";
+import agendaMapper from "../lib/agendaMapper"
 
 
 export default () => (
@@ -35,27 +37,7 @@ export default () => (
         render={ data => {
             
             const tracks = data.site.siteMetadata.agenda.tracks;
-            const agenda = data.site.siteMetadata.agenda.time_slots.map((slot, index) => {
-
-                const content = tracks.map(track => {
-                    const track_content = track.content_in_slots[index];
-                    const empty = {type: "empty"}
-
-                    if(!track_content || !track_content.type) return empty;
-
-                    return {
-                        type: track_content.type,
-                        content: track_content.type === "speaker" ?
-                                data.site.siteMetadata.speakers.find(speaker => speaker.slug === track_content.content)
-                                : track_content.content
-                    }
-
-                });
-                content.unshift(slot);
-
-                return content;
-
-            });
+            const agenda = agendaMapper(data.site.siteMetadata.agenda, data.site.siteMetadata.speakers);
             
             return (
             <section id="agenda">
