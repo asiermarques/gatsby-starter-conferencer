@@ -82,7 +82,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
                     path: speaker.slug,
                     component: speakerTemplate,
                     context: {
-                    speaker,
+                        speaker,
                     },
                 })
             }

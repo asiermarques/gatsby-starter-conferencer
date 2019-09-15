@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav renders correctly 1`] = `
+<ul
+  className="nav flex-column"
+>
+  <li
+    className="nav-item"
+  >
+    <a
+      className="nav-link"
+      href="/test"
+      title="Test"
+    >
+      Test
+    </a>
+  </li>
+</ul>
+`;

@@ -9,7 +9,7 @@ exports[`SpeakerCard renders correctly 1`] = `
     class="image"
     style={
       Object {
-        "backgroundImage": "url('/assets/img/tests.jpg')",
+        "backgroundImage": "url('/assets/img/test.jpg')",
       }
     }
   />

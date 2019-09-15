@@ -42,7 +42,6 @@ const SpeakerTemplate = context => {
                             {speaker.social.twitter ? <a href={speaker.social.twitter}><FaTwitter/></a> : ""}&nbsp;
                             {speaker.social.github ? <a href={speaker.social.github}><FaGithub/></a> : ""}&nbsp;
                             {speaker.social.linkedin ? <a href={speaker.social.linkedin}><FaLinkedin/></a> : ""}
-                            
                         </p>
                         <h4>About</h4>
                         <p>{speaker.bio}</p>

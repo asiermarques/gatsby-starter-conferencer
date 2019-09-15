@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet"
 import Layout from "../components/layout"
 import SpeakerCard from "../components/speakerCard"
 import {Header} from "../components/headerHome"
-import Agenda from "../components/agenda"
+import {Agenda} from "../components/agenda"
 import Footer from "../components/footer"
 import { graphql} from "gatsby"
 
@@ -57,11 +57,6 @@ export const query = graphql`
             image,
             name,
             company
-        }
-        organizers {
-          name
-          link
-          image
         }
       }
     }

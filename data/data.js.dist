@@ -130,5 +130,16 @@ module.exports =
                 }
             ]
         }
+    ],
+    "footer_links": [
+        {
+            "link": "/code-of-conduct",
+            "title": "Code of conduct"
+        },
+        {
+            "link": "/#agenda",
+            "title": "Agenda"
+        }
+
     ]
 }

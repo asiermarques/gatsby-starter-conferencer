@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sponsors renders correctly 1`] = `
+<section
+  id="agenda"
+>
+  <div
+    class="container"
+  >
+    <h2
+      class="text-center"
+    >
+      Agenda
+    </h2>
+    <div
+      class="table-responsive-sm"
+    >
+      <table
+        class="table table-striped stacktable large-only"
+        id="agenda-table"
+      >
+        <thead>
+          <tr>
+            <th />
+            <th
+              width="40%"
+            >
+              Olympia Room
+            </th>
+            <th
+              width="40%"
+            >
+              Niza
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td
+              class="time"
+            >
+              10:00-11:00
+            </td>
+            <td>
+              <a
+                href="sara-smith#talk"
+              >
+                <h5>
+                  Talk title demo
+                </h5>
+                <p>
+                  Sara Smith
+                </p>
+              </a>
+            </td>
+            <td>
+              <a
+                href="sara-smith#talk"
+              >
+                <h5>
+                  Talk title demo
+                </h5>
+                <p>
+                  Sara Smith
+                </p>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              class="time"
+            >
+              11:00-12:00
+            </td>
+            <td>
+              <p>
+                test
+              </p>
+            </td>
+            <td>
+              <p>
+                test
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+`;

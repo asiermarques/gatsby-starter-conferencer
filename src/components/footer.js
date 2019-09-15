@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import LocationMap from "./locationMap"
+import {LocationMap} from "./locationMap"
 import {Sponsors} from "./sponsors"
+import Organizers from "./organizers"
+import Nav from "./nav"
 
 
 export default () => (
@@ -10,25 +12,15 @@ export default () => (
         query {
             site {
               siteMetadata {
-                canonical_url,
-                conference_hashtag,
-                conference_name,
-                conference_claim,
-                home {
-                    title
-                    description
-                    agenda_cta_text
-                }
-                speakers {
-                    slug,
-                    image,
-                    name,
-                    company
-                }
+                conference_hashtag
                 organizers {
                   name,
                   link,
                   image
+                },
+                footer_links {
+                  link,
+                  title
                 }
               }
             }
@@ -44,28 +36,12 @@ export default () => (
 
               <div class="row">
                     <div class="col-md-7">
-
-                      <h3>Organizers</h3>
-                      <div class="row justify-content-start">
-                        {data.site.siteMetadata.organizers.map( organizer => 
-                            <div class="col-6 col-md-3">
-                                <a href={organizer.link} title={organizer.name} 
-                                target="_blank" 
-                                rel="noopener noreferrer">
-                                    <img src={organizer.image} alt={organizer.name}  class="img-thumbnail"/>
-                                </a>
-                            </div>
-                        )}
-                    </div>
+                      <Organizers items={data.site.siteMetadata.organizers}/>
                     </div>
 
                     <div class="col-md-5 text-center">
-
                       <h4>About</h4>
-                      <ul className="nav flex-column">
-                          <li className="nav-item"><a href="/code-of-conduct" className="nav-link">Code of conduct</a></li>
-                      </ul>
-
+                      <Nav items={data.site.siteMetadata.footer_links}></Nav>
                     </div>
 
               </div>
@@ -78,7 +54,7 @@ export default () => (
         <section>
             <div className="container">
                 <hr></hr>
-                Made with the <a href="https://github.com/asiermarques/gatsby-starter-conferencer">Gatsby Conferencer starter</a>
+                Created with the <a href="https://github.com/asiermarques/gatsby-starter-conferencer">Gatsby Conferencer starter</a>
             </div>
         </section>
 

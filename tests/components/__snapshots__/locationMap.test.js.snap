@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationMap renders correctly 1`] = `
+<section
+  id="where"
+>
+  <h2
+    class="text-center"
+  >
+    Location
+  </h2>
+  <div
+    class="content_wrap"
+  >
+    <div
+      class="content"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="col-md-5 col-xs-12"
+        >
+          <div
+            class="card"
+          >
+            <div
+              class="card-body"
+            >
+              <div
+                class="address"
+              >
+                <h5>
+                  Main Venue
+                </h5>
+                <p>
+                  <span
+                    dangerouslySetInnerHTML={
+                      Object {
+                        "__html": "Example Street 140<br>Gotham 48480",
+                      }
+                    }
+                  />
+                  <br />
+                  <small>
+                    <a
+                      href="https://www.google.com/maps?ll=43.266707,-2.945395&z=17&t=m&hl=es&gl=ES&mapclient=embed"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      open map
+                    </a>
+                  </small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <iframe
+      allowfullscreen="false"
+      frameborder="0"
+      height="550"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.255497835498!2d-2.947592084396059!3d43.26702288533392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDE2JzAxLjMiTiAywrA1Nic0My41Ilc!5e0!3m2!1ses!2ses!4v1543099024128"
+      title="map"
+      width="100%"
+    />
+  </div>
+</section>
+`;

@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
 import {PureHeader as Header} from "../../src/components/headerInner"
-import HeaderConfigFixture from "../__fixtures/headerConfig"
+import HeaderConfigFixture from "../__fixtures/HeaderConfig"
 
 describe("HeaderInner", () => {
   it("renders correctly", () => {
