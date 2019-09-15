@@ -2,6 +2,7 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { from } from "rxjs";
 import agendaMapper from "../lib/agendaMapper"
+import agendaSlotType from "../lib/agendaSlotTypes";
 
 
 export default () => (
@@ -58,7 +59,7 @@ export default () => (
                                     <td class="time">{time_range}</td>
                                     {content.map( content_item => {
                                         
-                                        if(content_item.type === "speaker") { 
+                                        if(content_item.type === agendaSlotType.SPEAKER) { 
                                             return (
                                                 <td>
                                                     <a href={content_item.content.slug + "#talk"}>

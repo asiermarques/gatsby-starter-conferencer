@@ -1,6 +1,7 @@
 import AgendaConfigFixture from "../__fixtures/AgendaConfig"
 import SpeakerFixture from "../__fixtures/Speaker"
 import agendaMapper from "../../src/lib/agendaMapper"
+import agendaSlotType from "../../src/lib/agendaSlotTypes"
 
 describe("AgendaMapper", () => {
   it("map the agenda fixture", () => {
@@ -8,7 +9,7 @@ describe("AgendaMapper", () => {
 
     const speakerSlot = {
       "content": SpeakerFixture,
-      "type": "speaker"
+      "type": agendaSlotType.SPEAKER
     };
     expect(agendaLine1).toEqual([
       AgendaConfigFixture.time_slots[0],
@@ -18,7 +19,7 @@ describe("AgendaMapper", () => {
 
     const textSlot = {
       "content": "test",
-      "type": "text"
+      "type": agendaSlotType.TEXT
     };
     expect(agendaLine2).toEqual([
       AgendaConfigFixture.time_slots[1],

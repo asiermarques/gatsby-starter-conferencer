@@ -1,4 +1,5 @@
 import Speaker from "./Speaker"
+import agendaSlotType from "../../src/lib/agendaSlotTypes"
 
 export default {
     "visible": true,
@@ -8,11 +9,11 @@ export default {
             "name": "Olympia Room",
             "content_in_slots": [
                 {
-                    "type": "speaker",
+                    "type": agendaSlotType.SPEAKER,
                     "content": Speaker.slug
                 },
                 {
-                    "type": "text",
+                    "type": agendaSlotType.TEXT,
                     "content": "test"
                 }
             ]
@@ -21,11 +22,11 @@ export default {
             "name": "Niza",
             "content_in_slots": [
                 {
-                    "type": "speaker",
+                    "type": agendaSlotType.SPEAKER,
                     "content": Speaker.slug
                 },
                 {
-                    "type": "text",
+                    "type": agendaSlotType.TEXT,
                     "content": "test"
                 }
             ]
